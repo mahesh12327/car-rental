@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Route } from "react-router-dom";
+import "./App.css";
+import Admin from "./components/Admin/Admin";
+import Home from "./components/Home/Home";
+import { getCarsData, sendCarsData } from "./components/Store";
+
+let isInitial = true;
 
 function App() {
+  const dispatch = useDispatch();
+  const cars = useSelector((state) => state.cars);
+  useEffect(() => {
+    dispatch(getCarsData());
+  }, [dispatch]);
+  useEffect(() => {
+    if (isInitial) {
+      isInitial = false;
+      return;
+    }
+    dispatch(sendCarsData(cars));
+  }, [cars, dispatch]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/" exact>
+        <Home></Home>
+      </Route>
+      <Route path="/admin" exact>
+        <Admin></Admin>
+      </Route>
+      <Route path="/admin/:id" exact>
+        <Admin></Admin>
+      </Route>
     </div>
   );
 }

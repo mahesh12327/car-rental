@@ -1,0 +1,24 @@
+.AdminBody {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1.5fr 6fr;
+  column-gap: 20px;
+}
+
+.admin-car-filter {
+  height: 100%;
+}
+
+.unordered-list {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.unordered-list li {
+  margin-bottom: 10px;
+}
+
+.unordered-list li:hover {
+  color: #dac2b4;
+}

@@ -1,0 +1,195 @@
+.AdminCar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 6fr 2.5fr;
+  column-gap: 15px;
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 30px;
+  border: 1px solid gray;
+}
+
+.activeAdminCar {
+  border: 1px solid rgb(255, 236, 66) !important;
+}
+
+.AdminCar:hover,
+.activeAdminCar {
+  border: 1px solid rgb(128, 128, 128);
+  background-color: #25242c;
+  box-shadow: 1px 1px 15px 1px rgb(31, 31, 31);
+}
+
+.car-image-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-image {
+  width: 230px;
+  height: 150px;
+  /* object-fit: contain; */
+  border-radius: 3px;
+}
+
+.car-company {
+  margin: 0;
+}
+
+.car-model {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #dcdcdc;
+}
+
+.car-features {
+  padding: 10px;
+  color: #dcdcdc;
+}
+
+.feature {
+  margin-bottom: 5px;
+}
+
+.fuel-type-icon,
+.transmission-icon,
+.seats-icon,
+.ac-icon,
+.rating-icon {
+  margin: 0 10px;
+}
+
+.model-year {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  margin-top: 20px;
+  color: #dcdcdc;
+}
+
+.car-features {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 3fr 1fr;
+}
+
+.price-container {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  text-align: end;
+}
+
+.price-perday-text {
+  margin: 0;
+}
+
+.cost {
+  margin: 0;
+}
+
+.edit-btn {
+  background-color: #f0ac00;
+  outline: none;
+  border: none;
+  /* width: 100%; */
+  font-size: larger;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #d69a00;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #832306;
+  outline: none;
+  border: none;
+  /* width: 100%; */
+  font-size: larger;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #651f0d;
+  cursor: pointer;
+}
+
+.customInput {
+  -webkit-appearance: none;
+  font-family: inherit;
+  height: 25px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 0;
+  color: rgb(141, 141, 141);
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+}
+
+.customInput:focus {
+  outline: none;
+}
+
+.companyCustomInput {
+  width: 50%;
+  font-weight: 580;
+  font-size: 2rem;
+}
+
+.seatsCustomInput {
+  width: 10%;
+}
+
+.transmissionCustomInput {
+  width: 50%;
+}
+
+.fuelCustomInput {
+  width: 35%;
+}
+
+.acCustomInput {
+  width: 30%;
+}
+
+.yearCustomInput {
+  width: 30%;
+}
+
+.tripsCustomInput {
+  width: 20%;
+}
+
+.ratingCustomInput {
+  width: 20%;
+}
+
+.costCustomInput {
+  width: 50%;
+}
+
+.modelCustomInput {
+  width: 40%;
+  display: block;
+}
+
+.imageCustomInput {
+  margin-top: 20px;
+  width: 100%;
+}

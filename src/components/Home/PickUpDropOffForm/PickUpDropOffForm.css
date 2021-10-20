@@ -1,0 +1,58 @@
+.PickUpDropOffForm {
+  margin-bottom: 20px;
+}
+
+.pick-drop-form-container {
+  background-color: #ffb700;
+  border-radius: 8px;
+  color: black;
+  display: grid;
+  align-items: center;
+}
+
+.pick-drop-form-container h2 {
+  margin: 20px 20px 0px 20px;
+}
+
+.pick-drop-form {
+  margin: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 8fr 1fr;
+  column-gap: 10px;
+}
+
+.pick-drop-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.intro-card {
+  margin-left: 20px;
+}
+
+.label-input {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  margin-bottom: 5px;
+}
+
+.label-input-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 5px;
+}
+
+.search-btn {
+  background-color: #008000;
+  color: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-btn h1 {
+  margin: 0;
+}

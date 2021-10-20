@@ -1,0 +1,80 @@
+.add-new-car-text-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 6fr;
+}
+
+.add-new-car-text {
+  display: inline-block;
+  cursor: pointer;
+  font-size: larger;
+  margin: 10px;
+}
+
+.add-new-car-text:hover {
+  color: #dac2b4;
+}
+
+.car-add-notification {
+  margin: 0;
+  text-align: end;
+  align-self: center;
+  color: #45fa45;
+  font-size: large;
+}
+
+.add-new-car-container {
+  background-color: #ffb700;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.add-new-car-form {
+  color: black;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  padding: 20px;
+}
+
+.addForm-label-input {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  margin-bottom: 5px;
+}
+
+.add-new-car-btn h2 {
+  margin: 0;
+}
+
+.add-btn {
+  background-color: #068323;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: larger;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.add-btn:hover {
+  background-color: #0d6521;
+  cursor: pointer;
+}
+
+span.down-icon-container {
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+
+span.up-icon-container {
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}

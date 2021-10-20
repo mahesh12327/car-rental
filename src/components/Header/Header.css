@@ -1,0 +1,36 @@
+.Header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 1.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.logo-name {
+  font-family: "Lobster", cursive;
+  color: #ff9100;
+}
+
+.search {
+  text-align: end;
+}
+
+.about,
+.fleet,
+.contact {
+  text-align: center;
+}
+
+.search-car-text {
+  margin-right: 7px;
+}
+
+.search-input {
+  border: none;
+  background-color: #2a2834;
+  border-bottom: 1px solid white;
+  outline: none;
+  caret-color: white;
+}
+
+.search-icon {
+  cursor: pointer;
+}
