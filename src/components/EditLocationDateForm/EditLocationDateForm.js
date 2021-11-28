@@ -1,11 +1,11 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { timingdetailsAction } from "../../Store/timingDetailsSlice";
+import { timingdetailsAction } from "../../components/Store/timingDetailsSlice";
 
-import "./PickUpDropOffForm.css";
+import "./EditLocationDateForm.css";
 
-const PickUpDropOffForm = () => {
+const EditLocationDateForm = ({ timing, edit }) => {
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const [pickupDate, setPickupDate] = useState("");
@@ -14,7 +14,15 @@ const PickUpDropOffForm = () => {
   const [dropoffTime, setDropoffTime] = useState("");
   const history = useHistory();
   const dispatch = useDispatch();
-  const submitHandler = (event) => {
+  useEffect(() => {
+    setPickup(timing.pickup);
+    setDropoff(timing.dropoff);
+    setPickupDate(timing.pickupDate);
+    setDropoffDate(timing.dropoffDate);
+    setPickupTime(timing.pickupTime);
+    setDropoffTime(timing.dropoffTime);
+  }, [timing]);
+  const editSubmitHandler = (event) => {
     event.preventDefault();
     const timingDetailsObj = {
       pickup,
@@ -26,80 +34,78 @@ const PickUpDropOffForm = () => {
     };
     dispatch(timingdetailsAction.sendTiming(timingDetailsObj));
     history.push("/fleet");
+    console.log(timingDetailsObj);
     setPickup("");
     setDropoff("");
     setPickupDate("");
     setPickupTime("");
     setDropoffDate("");
     setDropoffTime("");
+    edit();
   };
   return (
-    <div className="PickUpDropOffForm">
-      <div className="intro-card">
-        <h1 className="intro-title">Car Rental</h1>
-        <p className="intro-description">Best Rental Service in the Town</p>
-      </div>
-      <div className="pick-drop-form-container">
-        <h2>Find the right car for you</h2>
-        <form className="pick-drop-form" onSubmit={submitHandler}>
-          <div className="pick-drop-grid">
-            <div className="label-input">
+    <div className="EditLocationDateForm">
+      <div className="pick-drop-form-container1">
+        <h3>Edit Search</h3>
+        <form className="pick-drop-form1" onSubmit={editSubmitHandler}>
+          <div className="pick-drop-grid1">
+            <div className="label-input1">
               <label>Pick Up Location</label>
               <input
                 type="text"
-                className="intro-form-input"
+                className="intro-form-input1"
                 placeholder="Enter pick up location"
-                value={pickup}
+                defaultValue={timing.pickup}
                 onChange={(event) => {
                   setPickup(event.target.value);
                 }}
               />
             </div>
-            <div className="label-input-input">
+            <div className="label-input-input1">
               <label>Pick Up Date</label>
               <input
                 type="date"
-                className="intro-form-input"
-                value={pickupDate}
+                className="intro-form-input1"
+                defaultValue={timing.pickupDate}
                 onChange={(event) => {
                   setPickupDate(event.target.value);
                 }}
               />
               <input
                 type="time"
-                className="intro-form-input"
-                value={pickupTime}
+                className="intro-form-input1"
+                defaultValue={timing.pickupTime}
                 onChange={(event) => {
                   setPickupTime(event.target.value);
                 }}
               />
             </div>
-            <div className="label-input">
+            <div className="label-input1">
               <label>Drop Off Location</label>
               <input
                 type="text"
-                className="intro-form-input"
+                className="intro-form-input1"
                 placeholder="Enter drop off location"
-                value={dropoff}
+                defaultValue={timing.dropoff}
                 onChange={(event) => {
                   setDropoff(event.target.value);
                 }}
               />
             </div>
-            <div className="label-input-input">
+            <div className="label-input-input1">
               <label>Drop Off Date</label>
               <input
                 type="date"
-                className="intro-form-input"
-                value={dropoffDate}
+                className="intro-form-input1"
+                defaultValue={timing.dropoffDate}
                 onChange={(event) => {
                   setDropoffDate(event.target.value);
                 }}
               />
               <input
                 type="time"
-                className="intro-form-input"
-                value={dropoffTime}
+                className="intro-form-input1"
+                defaultValue={timing.dropoffTime}
                 onChange={(event) => {
                   setDropoffTime(event.target.value);
                 }}
@@ -117,4 +123,4 @@ const PickUpDropOffForm = () => {
   );
 };
 
-export default PickUpDropOffForm;
+export default EditLocationDateForm;

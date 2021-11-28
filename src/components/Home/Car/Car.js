@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./Car.css";
+import { useHistory } from "react-router-dom";
 
 library.add(faUsers);
 library.add(faGasPump);
@@ -18,6 +19,11 @@ library.add(faFan);
 library.add(faStar);
 
 const Car = ({ car }) => {
+  const history = useHistory();
+  const bookHandler = () => {
+    history.push(`/bookCar?id=${car.id}`);
+  };
+  console.log(car);
   return (
     <div className="Car">
       <div className="car-image-container">
@@ -67,7 +73,9 @@ const Car = ({ car }) => {
           <h1 className="cost">&#8377; {car.cost}</h1>
         </div>
 
-        <button className="book-btn">Book</button>
+        <button className="book-btn" onClick={bookHandler}>
+          Book
+        </button>
       </div>
     </div>
   );

@@ -5,18 +5,44 @@
 }
 
 .logo-name {
+  font-size: 2.25rem;
+  margin: 20px 0px;
+}
+
+.logo-name > span {
+  cursor: pointer;
+}
+
+.logo-name a {
   font-family: "Lobster", cursive;
+  text-decoration: none;
   color: #ff9100;
 }
-
 .search {
-  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.about,
 .fleet,
+.about,
 .contact {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fleet a,
+.about a,
+.contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.fleet a:hover,
+.about a:hover,
+.contact a:hover {
+  color: rgb(207, 207, 207);
 }
 
 .search-car-text {

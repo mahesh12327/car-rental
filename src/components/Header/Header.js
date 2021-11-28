@@ -4,6 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
+import { Link, NavLink } from "react-router-dom";
 
 library.add(faSearch);
 const Header = () => {
@@ -14,7 +15,9 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="logo-name">
-        <h1>Ardent</h1>
+        <Link to="/">
+          <span>Ardent</span>
+        </Link>
       </div>
       <div className="search">
         <p>
@@ -35,13 +38,13 @@ const Header = () => {
         </p>
       </div>
       <div className="about">
-        <p>about</p>
+        <NavLink to="/about">about</NavLink>
       </div>
       <div className="fleet">
-        <p>fleet</p>
+        <NavLink to="/fleet">fleet</NavLink>
       </div>
       <div className="contact">
-        <p>contact</p>
+        <NavLink to="/contact">contact</NavLink>
       </div>
     </div>
   );

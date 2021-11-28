@@ -1,0 +1,89 @@
+.ConfirmCar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+.bookCar-timing-container {
+  width: 80%;
+  margin: auto;
+}
+.back-bookCar-fleet {
+  color: white;
+  text-decoration: underline;
+}
+
+.back-bookCar-fleet-container {
+  margin: 20px 0px;
+}
+
+.back-bookCar-fleet:hover {
+  color: rgb(196, 196, 196);
+}
+
+.divider1 {
+  background-color: rgb(82, 82, 82);
+  height: 1px;
+  border: 0;
+  /* width: 90%; */
+  /* margin: 40px 0px; */
+}
+
+.checkout-loc-date-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 7fr;
+  margin-top: 20px;
+}
+
+.checkout-loc-date-container > div p {
+  margin: 0px;
+}
+.checkout-loc-date-container > div h3 {
+  margin: 5px 0px 25px 0px;
+}
+
+.dotted-lines {
+  /* position: absolute; */
+  display: flex;
+  margin: 5px 0px 7px 9px;
+  border-left: 1px dashed white;
+  height: 50px;
+  /* height: fit-content; */
+}
+
+.checkout-btn {
+  background-color: #008000;
+  color: white;
+  margin: auto;
+  padding: 10px 60px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.checkout-btn:hover {
+  background-color: #0d6521;
+}
+
+.cost-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.checkout-small-container {
+  border: 2px solid rgb(109, 109, 109);
+  padding: 10px 20px 25px 20px;
+  border-radius: 8px;
+}
+
+.r-icon {
+  position: relative;
+  top: 3px;
+}
+
+.circle-tick {
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}

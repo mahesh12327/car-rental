@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Admin from "./components/Admin/Admin";
+import BookCar from "./components/BookCar/BookCar";
+import CheckOut from "./components/CheckOut/CheckOut";
+import Fleet from "./components/Fleet/Fleet";
 import Home from "./components/Home/Home";
 import { getCarsData, sendCarsData } from "./components/Store";
 
@@ -31,6 +34,15 @@ function App() {
       </Route>
       <Route path="/admin/:id" exact>
         <Admin></Admin>
+      </Route>
+      <Route path="/fleet" exact>
+        <Fleet></Fleet>
+      </Route>
+      <Route path="/bookCar" exact>
+        <BookCar></BookCar>
+      </Route>
+      <Route path="/checkout" exact>
+        <CheckOut></CheckOut>
       </Route>
     </div>
   );

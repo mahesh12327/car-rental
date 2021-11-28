@@ -15,6 +15,7 @@ const Home = () => {
       <PickUpDropOffForm></PickUpDropOffForm>
       <ServicesCard></ServicesCard>
       <div>
+        <h1>Explore Cars</h1>
         {allCars.cars.map((car) => (
           <Car key={car.id} car={car}></Car>
         ))}

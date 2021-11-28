@@ -1,0 +1,23 @@
+.check-label-input {
+  display: grid;
+  grid-row: 1fr;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.check-details-btn-contain {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.check-details-btn {
+  background-color: #008000;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.check-details-btn:hover {
+  background-color: #0d6521;
+}

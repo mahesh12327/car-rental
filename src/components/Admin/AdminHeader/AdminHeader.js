@@ -4,6 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./AdminHeader.css";
+import { Link } from "react-router-dom";
 
 library.add(faSearch);
 const AdminHeader = () => {
@@ -14,7 +15,9 @@ const AdminHeader = () => {
   return (
     <div className="AdminHeader">
       <div className="logo-name">
-        <h1>Ardent</h1>
+        <Link to="/">
+          <span>Ardent</span>
+        </Link>
       </div>
       <div className="search">
         <p>

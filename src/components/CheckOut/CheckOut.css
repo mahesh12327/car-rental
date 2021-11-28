@@ -1,0 +1,17 @@
+.back-checkout-bookCar {
+  color: white;
+  text-decoration: underline;
+}
+
+.back-checkout-bookCar-container {
+  margin: 20px 0px;
+}
+
+.back-checkout-bookCar:hover {
+  color: rgb(196, 196, 196);
+}
+
+.checkout-final-price {
+  border: 1px solid white;
+  padding: 0px 15px;
+}

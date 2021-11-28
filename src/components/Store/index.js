@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import carsSlice, { carsAction } from "./carsSlice";
 import notificationSlice, { notificationAction } from "./notificationSlice";
+import timingDetailsSlice from "./timingDetailsSlice";
 
 export const sendCarsData = (cars) => {
   return async (dispatch) => {
@@ -55,7 +56,11 @@ export const getCarsData = () => {
 };
 
 const store = configureStore({
-  reducer: { cars: carsSlice.reducer, notification: notificationSlice.reducer },
+  reducer: {
+    cars: carsSlice.reducer,
+    notification: notificationSlice.reducer,
+    timing: timingDetailsSlice.reducer,
+  },
 });
 
 export default store;
